@@ -5,15 +5,15 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
+    port: 5173,
     proxy: {
       '/api': {
-        
-        target: 'https://contracthubpk-backend-3.vercel.app',
+        target: process.env.VITE_BACKEND_TARGET || 'http://localhost:8004',
         changeOrigin: true,
         secure: false,
       },
       '/uploads': {
-        target: 'https://contracthubpk-backend-3.vercel.app',
+        target: process.env.VITE_BACKEND_TARGET || 'http://localhost:8004',
         changeOrigin: true,
         secure: false,
       },

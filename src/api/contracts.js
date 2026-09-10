@@ -1,4 +1,6 @@
-const API_URL = '/api/contracts';
+import { getApiUrl } from './config';
+
+const API_URL = getApiUrl('/api/contracts');
 
 const authHeader = (token) => ({
   'Content-Type': 'application/json',

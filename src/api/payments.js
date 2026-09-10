@@ -1,4 +1,6 @@
-const API_URL = '/api/payments';
+import { getApiUrl } from './config';
+
+const API_URL = getApiUrl('/api/payments');
 
 const authHeader = (token) => ({
   'Content-Type': 'application/json',

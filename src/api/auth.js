@@ -1,5 +1,6 @@
-// API utility functions for auth endpoints
-const API_BASE = '/api/auth';
+import { getApiUrl } from './config';
+
+const API_BASE = getApiUrl('/api/auth');
 
 /**
  * Sign up a new user

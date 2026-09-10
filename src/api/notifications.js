@@ -1,6 +1,7 @@
 import axios from 'axios';
+import { getApiUrl } from './config';
 
-const API_URL = '/api/notifications';
+const API_URL = getApiUrl('/api/notifications');
 
 export const getNotifications = async (token) => {
   const config = { headers: { Authorization: `Bearer ${token}` } };

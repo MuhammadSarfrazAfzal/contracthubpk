@@ -8,6 +8,7 @@ import {
   Plus, Key, Trash2, CheckCircle, XCircle, Hand
 } from 'lucide-react';
 import NotificationBell from '../components/NotificationBell';
+import { getApiUrl } from '../api/config';
 import './Admin.css';
 import './Dashboard.css'; // For background orbs
 
@@ -34,7 +35,7 @@ const AdminDashboard = () => {
   const [newUser, setNewUser] = useState({ email: '', password: '', role: 'client' });
   const [newPass, setNewPass] = useState('');
 
-  const API_BASE = '/api/admin';
+  const API_BASE = getApiUrl('/api/admin');
   const headers = { Authorization: `Bearer ${token}` };
 
   useEffect(() => {

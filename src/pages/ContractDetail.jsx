@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import NotificationBell from '../components/NotificationBell';
 import PaymentModal from '../components/PaymentModal';
+import { getUploadUrl } from '../api/config';
 import './Contracts.css';
 
 const formatDate = (d) =>
@@ -442,7 +443,9 @@ const ContractDetail = () => {
                                   <Paperclip size={12} /> {m.submittedFile.originalName}
                                 </div>
                                 <a 
-                                  href={`/uploads/${m.submittedFile.filename}`} 
+                                  href={getUploadUrl(m.submittedFile.filename)} 
+                                  target="_blank"
+                                  rel="noopener noreferrer"
                                   download={m.submittedFile.originalName}
                                   className="btn-ghost"
                                   style={{ padding: '0.1rem 0.4rem', fontSize: '0.7rem', color: 'var(--primary-blue)', display: 'flex', alignItems: 'center', gap: '0.3rem' }}
@@ -531,7 +534,9 @@ const ContractDetail = () => {
                       </div>
                     </div>
                     <a 
-                      href={`/uploads/${c.submittedFile.filename}`} 
+                      href={getUploadUrl(c.submittedFile.filename)} 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       download={c.submittedFile.originalName}
                       className="btn-primary"
                       style={{ padding: '0.5rem 1rem', fontSize: '0.85rem', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}
