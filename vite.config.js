@@ -7,12 +7,13 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8004',
+        
+        target: 'https://contracthubpk-backend-3.vercel.app/',
         changeOrigin: true,
         secure: false,
       },
       '/uploads': {
-        target: 'http://localhost:8004',
+        target: 'https://contracthubpk-backend-3.vercel.app/',
         changeOrigin: true,
         secure: false,
       },
