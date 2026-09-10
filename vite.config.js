@@ -8,12 +8,12 @@ export default defineConfig({
     proxy: {
       '/api': {
         
-        target: 'https://contracthubpk-backend-3.vercel.app/',
+        target: 'https://contracthubpk-backend-3.vercel.app',
         changeOrigin: true,
         secure: false,
       },
       '/uploads': {
-        target: 'https://contracthubpk-backend-3.vercel.app/',
+        target: 'https://contracthubpk-backend-3.vercel.app',
         changeOrigin: true,
         secure: false,
       },
